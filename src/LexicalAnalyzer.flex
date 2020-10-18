@@ -30,7 +30,7 @@ Identifier     = {Alpha}{AlphaNumeric}*
 %%// Identification of tokens
 
 // Chck weather the program starts or ends
-"BEGINPROG"	        {System.out.println("OK");return new Symbol(LexicalUnit.BEGINPROG,yyline, yycolumn,"BEGINPROG");}
+"BEGINPROG"	        {return new Symbol(LexicalUnit.BEGINPROG,yyline, yycolumn,"BEGINPROG");}
 "ENDPROG"		    {return new Symbol(LexicalUnit.ENDPROG,yyline, yycolumn,"ENDPROG");}
 
 // If/Else keywords

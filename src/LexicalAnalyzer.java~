@@ -677,7 +677,7 @@ class LexicalAnalyzer {
       else {
         switch (zzAction < 0 ? zzAction : ZZ_ACTION[zzAction]) {
           case 1:
-            { System.out.println(yytext());
+            { 
             }
             // fall through
           case 8: break;
@@ -707,7 +707,7 @@ class LexicalAnalyzer {
             // fall through
           case 13: break;
           case 7:
-            { return new Symbol(LexicalUnit.BEGINPROG,yyline, yycolumn,"BEGINPROG");
+            { System.out.println("OK");return new Symbol(LexicalUnit.BEGINPROG,yyline, yycolumn,"BEGINPROG");
             }
             // fall through
           case 14: break;
