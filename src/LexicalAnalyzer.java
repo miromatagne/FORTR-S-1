@@ -60,9 +60,9 @@ class LexicalAnalyzer {
   private static final int [] ZZ_CMAP_BLOCKS = zzUnpackcmap_blocks();
 
   private static final String ZZ_CMAP_BLOCKS_PACKED_0 =
-    "\12\0\4\1\57\0\1\2\1\3\46\0\1\4\1\5"+
+    "\12\0\4\1\57\0\1\2\1\3\6\0\1\4\1\5"+
     "\1\0\1\6\1\7\2\0\1\10\1\0\1\11\4\0"+
-    "\1\12\1\13\20\0\1\1\u01a2\0\2\1\326\0\u0100\1";
+    "\1\12\1\13\60\0\1\1\u01a2\0\2\1\326\0\u0100\1";
 
   private static int [] zzUnpackcmap_blocks() {
     int [] result = new int[1024];
@@ -685,22 +685,22 @@ class LexicalAnalyzer {
             // fall through
           case 10: break;
           case 4:
-            { return new Symbol(LexicalUnit.EQ,yyline, yycolumn);
+            { return new Symbol(LexicalUnit.EQ,yyline, yycolumn, "==");
             }
             // fall through
           case 11: break;
           case 5:
-            { return new Symbol(LexicalUnit.IF,yyline, yycolumn);
+            { return new Symbol(LexicalUnit.IF,yyline, yycolumn, "IF");
             }
             // fall through
           case 12: break;
           case 6:
-            { return new Symbol(LexicalUnit.ELSE,yyline, yycolumn);
+            { return new Symbol(LexicalUnit.ELSE,yyline, yycolumn, "ELSE");
             }
             // fall through
           case 13: break;
           case 7:
-            { return new Symbol(LexicalUnit.THEN,yyline, yycolumn);
+            { return new Symbol(LexicalUnit.THEN,yyline, yycolumn, "THEN");
             }
             // fall through
           case 14: break;

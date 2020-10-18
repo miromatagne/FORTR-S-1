@@ -26,16 +26,24 @@ Decimal        = \.[0-9]*
 Exponent       = [eE]{Integer}
 Real           = {Integer}{Decimal}?{Exponent}?
 Identifier     = {Alpha}{AlphaNumeric}*
+//Everything     = 
+
+//Comment        = "//"{Identifier}"\n"     
+/*il faudrait quand meme un état pour Comment je pense, pcq dans un commentaire on peut mettre tout, 
+le fait de définir à l'avance ce qu'il y aura déjà dedans fait qu'on pourra trouver un commentaire avec un contenu dont le compiler 
+ne détectera pas.
+Mon idée : créer state Comment. A l'intérieur mettre les différents Regex (ex. : alphanumeric, real, etc.), et puis mettre les actions
+(en l'occurence, ils font rien du tout).
+*/
 
 %%// Identification of tokens
 
 // Relational operators
-"=="	        { return new Symbol(LexicalUnit.EQ,yyline, yycolumn);}
+"=="	        { return new Symbol(LexicalUnit.EQ,yyline, yycolumn, "==");}
 ">"		        {return new Symbol(LexicalUnit.GT,yyline, yycolumn,">");}
 
 // If/Else keywords
-"if"	        {return new Symbol(LexicalUnit.IF,yyline, yycolumn);}
-"then"        {return new Symbol(LexicalUnit.THEN,yyline, yycolumn);}
-"else"        {return new Symbol(LexicalUnit.ELSE,yyline, yycolumn);}
-
-.             {}
+"IF"	        {return new Symbol(LexicalUnit.IF,yyline, yycolumn, "IF");}
+"THEN"          {return new Symbol(LexicalUnit.THEN,yyline, yycolumn, "THEN");}
+"ELSE"          {return new Symbol(LexicalUnit.ELSE,yyline, yycolumn, "ELSE");}
+.               {}

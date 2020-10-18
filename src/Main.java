@@ -24,8 +24,8 @@ public class Main{
           java.io.Reader reader = new java.io.InputStreamReader(stream, encodingName);
           scanner = new LexicalAnalyzer(reader);
           while (scanner.yylex().getType() != LexicalUnit.EOS ) {
-              Symbol receivedSymbol = scanner.yylex();
-              System.out.println(receivedSymbol.toString());
+            Symbol receivedSymbol = scanner.yylex();
+            System.out.println(receivedSymbol.toString());
           }
         }
         catch (java.io.FileNotFoundException e) {
