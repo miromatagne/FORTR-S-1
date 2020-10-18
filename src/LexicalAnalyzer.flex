@@ -1,4 +1,4 @@
-%%// Options of the scanner Miro
+%%// Options of the scanner
 
 %class LexicalAnalyzer	//Name
 %unicode		//Use unicode
@@ -29,9 +29,9 @@ Identifier     = {Alpha}{AlphaNumeric}*
 
 %%// Identification of tokens
 
-// Relational operators
-"=="	        { return new Symbol(LexicalUnit.EQ,yyline, yycolumn);}
-">"		        {return new Symbol(LexicalUnit.GT,yyline, yycolumn,">");}
+// Chck weather the program starts or ends
+"BEGINPROG"	        {System.out.println("OK");return new Symbol(LexicalUnit.BEGINPROG,yyline, yycolumn,"BEGINPROG");}
+"ENDPROG"		    {return new Symbol(LexicalUnit.ENDPROG,yyline, yycolumn,"ENDPROG");}
 
 // If/Else keywords
 "if"	        {return new Symbol(LexicalUnit.IF,yyline, yycolumn);}
