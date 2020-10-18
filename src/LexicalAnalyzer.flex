@@ -5,11 +5,11 @@
 %line         	//Use line counter (yyline variable)
 %column       	//Use character counter by line (yycolumn variable)
 %type Symbol  //Says that the return type is Symbol
-%function nextToken
+%standalone
 
 // Return value of the program
 %eofval{
-	return new Symbol(LexicalUnit.END_OF_STREAM, yyline, yycolumn);
+	return new Symbol(LexicalUnit.EOS, yyline, yycolumn);
 %eofval}
 
 // Extended Regular Expressions
@@ -30,24 +30,12 @@ Identifier     = {Alpha}{AlphaNumeric}*
 %%// Identification of tokens
 
 // Relational operators
-"!"		        {System.out.println("NOT: " + yytext()); return new Symbol(LexicalUnit.NOT,yyline, yycolumn);}
-"=="	        {System.out.println("EQUALS: " + yytext()); return new Symbol(LexicalUnit.EQUALS,yyline, yycolumn);}
-"!="	        {System.out.println("NOTEQUALS: " + yytext()); return new Symbol(LexicalUnit.NOTEQUALS,yyline, yycolumn);}
-">"		        {System.out.println("GREATER: " + yytext()); return new Symbol(LexicalUnit.GREATER,yyline, yycolumn);}
-">="	        {System.out.println("EGREATER: " + yytext()); return new Symbol(LexicalUnit.EGREATER,yyline, yycolumn);}
-"<"		        {System.out.println("LOWER: " + yytext()); return new Symbol(LexicalUnit.LOWER,yyline, yycolumn);}
-"<="	        {System.out.println("ELOWER: " + yytext()); return new Symbol(LexicalUnit.ELOWER,yyline, yycolumn);}
+"=="	        { return new Symbol(LexicalUnit.EQ,yyline, yycolumn);}
+">"		        {return new Symbol(LexicalUnit.GT,yyline, yycolumn,">");}
 
 // If/Else keywords
-"if"	        {System.out.println("IF: " + yytext()); return new Symbol(LexicalUnit.IF,yyline, yycolumn);}
-"then"        {System.out.println("THEN: " + yytext()); return new Symbol(LexicalUnit.THEN,yyline, yycolumn);}
-"else"        {System.out.println("ELSE: " + yytext()); return new Symbol(LexicalUnit.ELSE,yyline, yycolumn);}
+"if"	        {return new Symbol(LexicalUnit.IF,yyline, yycolumn);}
+"then"        {return new Symbol(LexicalUnit.THEN,yyline, yycolumn);}
+"else"        {return new Symbol(LexicalUnit.ELSE,yyline, yycolumn);}
 
-// Decimal number in scientific notation
-{Real}			  {System.out.println("FLOAT: " + yytext()); return new Symbol(LexicalUnit.FLOAT,yyline, yycolumn, new Double(yytext()));}
-
-// C99 variable identifier
-{Identifier}  {System.out.println("C99VAR: " + yytext()); return new Symbol(LexicalUnit.C99VAR,yyline, yycolumn, yytext());}
-
-// Ignore other characters
 .             {}

@@ -1,27 +1,27 @@
 public enum LexicalUnit{
-    BEGINPROG,
+    BEGINPROG, //MMM
     PROGNAME,
     ENDLINE,
-    ENDPROG,
+    ENDPROG, //MMM
     COMMA,
     VARNAME,
     ASSIGN,
     NUMBER,
-    LPAREN,
-    RPAREN,
-    MINUS,
-    PLUS,
-    TIMES,
-    DIVIDE,
-    IF,
-    THEN,
-    ENDIF,
-    ELSE,
-    EQ,
-    GT,
-    WHILE,
-    DO,
-    ENDWHILE,
+    LPAREN, //MMM
+    RPAREN, //MMM
+    MINUS, //MMM
+    PLUS, //MMM
+    TIMES, //MMM
+    DIVIDE, //MMM
+    IF, //TGL
+    THEN, //TGL
+    ENDIF, //TGL
+    ELSE, //TGL
+    EQ, //TGL
+    GT, //TGL
+    WHILE, //TGL
+    DO, //TGL
+    ENDWHILE, //TGL
     PRINT,
     READ,
     EOS
