@@ -19,8 +19,6 @@ AlphaLowerCase = [a-z]
 Alpha          = {AlphaUpperCase}|{AlphaLowerCase}
 Numeric        = [0-9]
 AlphaNumeric   = {Alpha}|{Numeric}
-BeginComment   = \*fiwfwingwngwgnwn*\
-Comment        = \*.*\
 
 Sign           = [+-]
 Integer        = {Sign}?(([1-9][0-9]*)|0)
@@ -32,8 +30,6 @@ Identifier     = {Alpha}{AlphaNumeric}*
 %%// Identification of tokens
 
 // Relational operators
-{Comment}           ....
-{AlphaLowerCase}    ....
 "!"		        {System.out.println("NOT: " + yytext()); return new Symbol(LexicalUnit.NOT,yyline, yycolumn);}
 "=="	        {System.out.println("EQUALS: " + yytext()); return new Symbol(LexicalUnit.EQUALS,yyline, yycolumn);}
 "!="	        {System.out.println("NOTEQUALS: " + yytext()); return new Symbol(LexicalUnit.NOTEQUALS,yyline, yycolumn);}
