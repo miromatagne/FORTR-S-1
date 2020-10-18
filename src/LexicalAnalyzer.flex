@@ -1,4 +1,4 @@
-%%// Options of the scanner
+%%// Options of the scanner Miro
 
 %class LexicalAnalyzer	//Name
 %unicode		//Use unicode
