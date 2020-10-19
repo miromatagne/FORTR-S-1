@@ -16,25 +16,34 @@
 
 AlphaUpperCase = [A-Z]
 AlphaLowerCase = [a-z]
-Alpha          = /*{AlphaUpperCase}|*/{AlphaLowerCase}
+Alpha          = {AlphaUpperCase}|{AlphaLowerCase}
 Numeric        = [0-9]
 AlphaNumeric   = {Alpha}|{Numeric}
+AlphaLowNumeric= {AlphaLowerCase}|{Numeric}
 Space          = "\t"|" "
 Any 		   = .
 NewLine		   = "\n"		
+EndLine	       = "\r"?"\n"
 
 Sign           = [+-]
 Integer        = {Sign}?(([1-9][0-9]*)|0)
-Decimal        = \.[0-9]*
-Exponent       = [eE]{Integer}
-Real           = {Integer}{Decimal}?{Exponent}?
-VarName        = {Alpha}{AlphaNumeric}*
-EndOfLine	   = "\r"?"\n"
+//Decimal      = \.[0-9]*
+//Exponent     = [eE]{Integer}
+Number         = {Integer}
+VarName        = {AlphaLowerCase}{AlphaLowNumeric}*
+ProgName       = {AlphaUpperCase}{AlphaNumeric}*{AlphaLowerCase}{AlphaNumeric}*
+
+
  
-Comment        = "//"."\n" |"/*"."*/"
+Comment        = "//"."\n" |"/*"."*/  " 
 
 %%// Identification of tokens
 
+{ProgName}       {return new Symbol(LexicalUnit.PROGNAME,yyline, yycolumn, yytext());}
+{VarName}       {return new Symbol(LexicalUnit.VARNAME,yyline, yycolumn, yytext());}
+{Number}        {return new Symbol(LexicalUnit.NUMBER,yyline, yycolumn, yytext());}
+":="            {return new Symbol(LexicalUnit.ASSIGN,yyline, yycolumn, ":=");}
+{EndLine}		{return new Symbol(LexicalUnit.ENDLINE,yyline, yycolumn, "\\n");}
 
 // Relational operators
 "=="	        { return new Symbol(LexicalUnit.EQ,yyline, yycolumn, "==");}
@@ -42,7 +51,8 @@ Comment        = "//"."\n" |"/*"."*/"
 
 // If/Else keywords  Remark : if we don't put a space between If and if (IFif), it will take the token with only IF
 // Is it correct? In my opinion : no. So we have to put above a space but it's not on point right now
-//{VarName}       {System.out.println("VAR");} 
+
+ 
 "IF"	        {return new Symbol(LexicalUnit.IF,yyline, yycolumn, "IF");}
 "THEN"          {return new Symbol(LexicalUnit.THEN,yyline, yycolumn, "THEN");}
 "ENDIF"         {return new Symbol(LexicalUnit.ENDIF,yyline, yycolumn, "ENDIF");}
@@ -51,6 +61,9 @@ Comment        = "//"."\n" |"/*"."*/"
 "DO"			{return new Symbol(LexicalUnit.DO,yyline, yycolumn, "DO");}
 "ENDWHILE"		{return new Symbol(LexicalUnit.ENDWHILE,yyline, yycolumn, "ENDWHILE");}
 
+","             {return new Symbol(LexicalUnit.COMMA,yyline, yycolumn, ",");}
+
+
 // Ignore the rest
 .               {}
-{EndOfLine}		{}
+

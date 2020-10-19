@@ -1,12 +1,12 @@
 public enum LexicalUnit{
     BEGINPROG, //MMM
-    PROGNAME,
-    ENDLINE,
+    PROGNAME,  //TGL
+    ENDLINE,  //MMM
     ENDPROG, //MMM
-    COMMA,
-    VARNAME,
-    ASSIGN,
-    NUMBER,
+    COMMA,   //TGL
+    VARNAME, //TGL
+    ASSIGN,  //TGL
+    NUMBER,  //TGL
     LPAREN, //MMM
     RPAREN, //MMM
     MINUS, //MMM
@@ -24,5 +24,5 @@ public enum LexicalUnit{
     ENDWHILE, //TGL
     PRINT,
     READ,
-    EOS
+    EOS  //MMM
 }
