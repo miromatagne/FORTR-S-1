@@ -42,7 +42,20 @@ Comment 	   = ("/*"(.|{EndOfLine})*"*/"|"//".*)
 {VarName}       {return new Symbol(LexicalUnit.VARNAME,yyline, yycolumn, yytext());}
 
 ":="            {return new Symbol(LexicalUnit.ASSIGN,yyline, yycolumn, ":=");}
-{EndLine}		{return new Symbol(LexicalUnit.ENDLINE,yyline, yycolumn, "\\n");}
+
+// Check weather the program starts or ends
+"BEGINPROG"	    {return new Symbol(LexicalUnit.BEGINPROG,yyline, yycolumn,"BEGINPROG");}
+"ENDPROG"		{return new Symbol(LexicalUnit.ENDPROG,yyline, yycolumn,"ENDPROG");}
+
+//Operations
+"+"				{return new Symbol(LexicalUnit.PLUS,yyline, yycolumn, "+");}
+"-"				{return new Symbol(LexicalUnit.MINUS,yyline, yycolumn, "-");}
+"*"				{return new Symbol(LexicalUnit.TIMES,yyline, yycolumn, "*");}
+"/"				{return new Symbol(LexicalUnit.DIVIDE,yyline, yycolumn, "/");}
+
+//Check for parenthesis
+"("				{return new Symbol(LexicalUnit.LPAREN,yyline, yycolumn, "(");}
+")"				{return new Symbol(LexicalUnit.RPAREN,yyline, yycolumn, ")");}
 
 // Relational operators
 "=="	        { return new Symbol(LexicalUnit.EQ,yyline, yycolumn, "==");}
@@ -64,4 +77,5 @@ Comment 	   = ("/*"(.|{EndOfLine})*"*/"|"//".*)
 
 // Ignore the rest
 .               {}
+{EndLine}		{return new Symbol(LexicalUnit.ENDLINE,yyline, yycolumn, "\\n");}
 
