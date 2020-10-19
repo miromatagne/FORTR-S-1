@@ -1,39 +1,26 @@
 public class Main{
     public static void main(String[] argv) {
     if (argv.length == 0) {
-      System.out.println("Usage : java LexicalAnalyzer [ --encoding <name> ] <inputfile(s)>");
+      System.out.println("Usage : java LexicalAnalyzer <inputfile(s)>");
     }
     else {
       int firstFilePos = 0;
-      String encodingName = "UTF-8";
-      if (argv[0].equals("--encoding")) {
-        firstFilePos = 2;
-        encodingName = argv[1];
-        try {
-          // Side-effect: is encodingName valid?
-          java.nio.charset.Charset.forName(encodingName);
-        } catch (Exception e) {
-          System.out.println("Invalid encoding '" + encodingName + "'");
-          return;
+      LexicalAnalyzer scanner = null;
+      try {
+        java.io.FileInputStream stream = new java.io.FileInputStream(argv[0]);
+        java.io.Reader reader = new java.io.InputStreamReader(stream, "UTF-8");
+        scanner = new LexicalAnalyzer(reader);
+        Symbol receivedSymbol = scanner.nextToken();
+        while (receivedSymbol.getType() != LexicalUnit.EOS ) {
+            System.out.println(receivedSymbol.toString());
+            receivedSymbol = scanner.nextToken();
         }
       }
-      for (int i = firstFilePos; i < argv.length; i++) {
-        LexicalAnalyzer scanner = null;
-        try {
-          java.io.FileInputStream stream = new java.io.FileInputStream(argv[i]);
-          java.io.Reader reader = new java.io.InputStreamReader(stream, encodingName);
-          scanner = new LexicalAnalyzer(reader);
-          Symbol receivedSymbol = scanner.yylex();
-          while (receivedSymbol.getType() != LexicalUnit.EOS ) {
-              System.out.println(receivedSymbol.toString());
-              receivedSymbol = scanner.yylex();
-          }
-        }
         catch (java.io.FileNotFoundException e) {
-          System.out.println("File not found : \""+argv[i]+"\"");
+          System.out.println("File not found : \""+argv[0]+"\"");
         }
         catch (java.io.IOException e) {
-          System.out.println("IO error scanning file \""+argv[i]+"\"");
+          System.out.println("IO error scanning file \""+argv[0]+"\"");
           System.out.println(e);
         }
         catch (Exception e) {
@@ -42,5 +29,4 @@ public class Main{
         }
       }
     }
-}
 }
