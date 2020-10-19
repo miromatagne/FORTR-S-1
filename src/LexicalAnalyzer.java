@@ -63,7 +63,7 @@ class LexicalAnalyzer {
     "\12\0\1\1\2\2\1\3\57\0\1\4\1\5\5\0"+
     "\1\6\1\7\1\10\1\0\1\11\1\12\2\0\1\13"+
     "\1\0\1\14\1\15\3\0\1\16\1\17\2\0\1\20"+
-    "\55\0\1\2\u01a2\0\2\2\326\0\u0100\21";
+    "\55\0\1\2\u01a2\0\2\2\326\0\u0100\2";
 
   private static int [] zzUnpackcmap_blocks() {
     int [] result = new int[1024];
@@ -90,12 +90,12 @@ class LexicalAnalyzer {
   private static final int [] ZZ_ACTION = zzUnpackAction();
 
   private static final String ZZ_ACTION_PACKED_0 =
-    "\1\0\1\1\1\2\1\1\1\3\5\1\1\4\1\5"+
-    "\7\0\2\6\2\0\1\7\2\0\1\10\1\0\1\11"+
-    "\1\0\1\12\2\0\1\13";
+    "\1\0\1\1\1\0\1\1\1\2\5\1\1\3\1\4"+
+    "\2\0\1\5\6\0\1\6\2\0\1\7\1\0\1\10"+
+    "\1\0\1\11\2\0\1\12";
 
   private static int [] zzUnpackAction() {
-    int [] result = new int[34];
+    int [] result = new int[32];
     int offset = 0;
     offset = zzUnpackAction(ZZ_ACTION_PACKED_0, offset, result);
     return result;
@@ -120,14 +120,13 @@ class LexicalAnalyzer {
   private static final int [] ZZ_ROWMAP = zzUnpackRowMap();
 
   private static final String ZZ_ROWMAP_PACKED_0 =
-    "\0\0\0\22\0\22\0\44\0\22\0\66\0\110\0\132"+
-    "\0\154\0\176\0\22\0\22\0\220\0\242\0\264\0\306"+
-    "\0\330\0\352\0\374\0\22\0\u010e\0\u0120\0\u0132\0\22"+
-    "\0\u0144\0\u0156\0\22\0\u0168\0\22\0\u017a\0\22\0\u018c"+
-    "\0\u019e\0\22";
+    "\0\0\0\21\0\42\0\63\0\21\0\104\0\125\0\146"+
+    "\0\167\0\210\0\21\0\21\0\231\0\252\0\21\0\273"+
+    "\0\314\0\335\0\356\0\377\0\u0110\0\21\0\u0121\0\u0132"+
+    "\0\21\0\u0143\0\21\0\u0154\0\21\0\u0165\0\u0176\0\21";
 
   private static int [] zzUnpackRowMap() {
-    int [] result = new int[34];
+    int [] result = new int[32];
     int offset = 0;
     offset = zzUnpackRowMap(ZZ_ROWMAP_PACKED_0, offset, result);
     return result;
@@ -150,17 +149,17 @@ class LexicalAnalyzer {
   private static final int [] ZZ_TRANS = zzUnpackTrans();
 
   private static final String ZZ_TRANS_PACKED_0 =
-    "\1\2\3\3\1\4\1\5\1\6\1\7\2\2\1\10"+
-    "\4\2\1\11\1\12\1\3\26\0\1\13\32\0\1\14"+
-    "\17\0\1\15\1\16\15\0\1\17\22\0\1\20\21\0"+
-    "\1\21\26\0\1\22\11\0\1\23\14\0\2\24\1\25"+
-    "\25\0\1\26\24\0\1\27\16\0\1\30\24\0\1\31"+
-    "\5\0\1\32\2\0\1\24\34\0\1\33\20\0\1\34"+
-    "\16\0\1\35\22\0\1\36\17\0\1\37\24\0\1\40"+
-    "\22\0\1\41\15\0\1\42\12\0";
+    "\2\2\1\0\1\3\1\4\1\5\1\6\1\7\2\2"+
+    "\1\10\4\2\1\11\1\12\22\0\1\2\23\0\1\13"+
+    "\31\0\1\14\16\0\1\15\1\16\14\0\1\17\21\0"+
+    "\1\20\20\0\1\21\25\0\1\22\10\0\1\23\21\0"+
+    "\1\24\23\0\1\25\15\0\1\26\23\0\1\27\5\0"+
+    "\1\30\14\0\1\31\17\0\1\32\15\0\1\33\21\0"+
+    "\1\34\16\0\1\35\23\0\1\36\21\0\1\37\14\0"+
+    "\1\40\11\0";
 
   private static int [] zzUnpackTrans() {
-    int [] result = new int[432];
+    int [] result = new int[391];
     int offset = 0;
     offset = zzUnpackTrans(ZZ_TRANS_PACKED_0, offset, result);
     return result;
@@ -203,12 +202,12 @@ class LexicalAnalyzer {
   private static final int [] ZZ_ATTRIBUTE = zzUnpackAttribute();
 
   private static final String ZZ_ATTRIBUTE_PACKED_0 =
-    "\1\0\2\11\1\1\1\11\5\1\2\11\7\0\1\11"+
-    "\1\1\2\0\1\11\2\0\1\11\1\0\1\11\1\0"+
+    "\1\0\1\11\1\0\1\1\1\11\5\1\2\11\2\0"+
+    "\1\11\6\0\1\11\2\0\1\11\1\0\1\11\1\0"+
     "\1\11\2\0\1\11";
 
   private static int [] zzUnpackAttribute() {
-    int [] result = new int[34];
+    int [] result = new int[32];
     int offset = 0;
     offset = zzUnpackAttribute(ZZ_ATTRIBUTE_PACKED_0, offset, result);
     return result;
@@ -538,7 +537,7 @@ class LexicalAnalyzer {
    * @return the next token.
    * @exception java.io.IOException if any I/O-Error occurs.
    */
-  public Symbol yylex() throws java.io.IOException {
+  public Symbol nextToken() throws java.io.IOException {
     int zzInput;
     int zzAction;
 
@@ -683,112 +682,54 @@ class LexicalAnalyzer {
             { 
             }
             // fall through
-          case 12: break;
+          case 11: break;
           case 2:
-            { System.out.print(yytext());
-            }
-            // fall through
-          case 13: break;
-          case 3:
             { return new Symbol(LexicalUnit.GT,yyline, yycolumn,">");
             }
             // fall through
-          case 14: break;
-          case 4:
+          case 12: break;
+          case 3:
             { return new Symbol(LexicalUnit.EQ,yyline, yycolumn, "==");
             }
             // fall through
-          case 15: break;
-          case 5:
+          case 13: break;
+          case 4:
             { return new Symbol(LexicalUnit.DO,yyline, yycolumn, "DO");
             }
             // fall through
-          case 16: break;
-          case 6:
-            // lookahead expression with fixed base length
-            zzMarkedPos = Character.offsetByCodePoints
-                (zzBufferL, zzStartRead, zzEndRead - zzStartRead, zzStartRead, 2);
+          case 14: break;
+          case 5:
             { return new Symbol(LexicalUnit.IF,yyline, yycolumn, "IF");
             }
             // fall through
-          case 17: break;
-          case 7:
+          case 15: break;
+          case 6:
             { return new Symbol(LexicalUnit.ELSE,yyline, yycolumn, "ELSE");
             }
             // fall through
-          case 18: break;
-          case 8:
+          case 16: break;
+          case 7:
             { return new Symbol(LexicalUnit.THEN,yyline, yycolumn, "THEN");
             }
             // fall through
-          case 19: break;
-          case 9:
+          case 17: break;
+          case 8:
             { return new Symbol(LexicalUnit.ENDIF,yyline, yycolumn, "ENDIF");
             }
             // fall through
-          case 20: break;
-          case 10:
+          case 18: break;
+          case 9:
             { return new Symbol(LexicalUnit.WHILE,yyline, yycolumn, "WHILE");
             }
             // fall through
-          case 21: break;
-          case 11:
+          case 19: break;
+          case 10:
             { return new Symbol(LexicalUnit.ENDWHILE,yyline, yycolumn, "ENDWHILE");
             }
             // fall through
-          case 22: break;
+          case 20: break;
           default:
             zzScanError(ZZ_NO_MATCH);
-        }
-      }
-    }
-  }
-
-  /**
-   * Runs the scanner on input files.
-   *
-   * This is a standalone scanner, it will print any unmatched
-   * text to System.out unchanged.
-   *
-   * @param argv   the command line, contains the filenames to run
-   *               the scanner on.
-   */
-  public static void main(String[] argv) {
-    if (argv.length == 0) {
-      System.out.println("Usage : java LexicalAnalyzer [ --encoding <name> ] <inputfile(s)>");
-    }
-    else {
-      int firstFilePos = 0;
-      String encodingName = "UTF-8";
-      if (argv[0].equals("--encoding")) {
-        firstFilePos = 2;
-        encodingName = argv[1];
-        try {
-          // Side-effect: is encodingName valid?
-          java.nio.charset.Charset.forName(encodingName);
-        } catch (Exception e) {
-          System.out.println("Invalid encoding '" + encodingName + "'");
-          return;
-        }
-      }
-      for (int i = firstFilePos; i < argv.length; i++) {
-        LexicalAnalyzer scanner = null;
-        try {
-          java.io.FileInputStream stream = new java.io.FileInputStream(argv[i]);
-          java.io.Reader reader = new java.io.InputStreamReader(stream, encodingName);
-          scanner = new LexicalAnalyzer(reader);
-          while ( !scanner.zzAtEOF ) scanner.yylex();
-        }
-        catch (java.io.FileNotFoundException e) {
-          System.out.println("File not found : \""+argv[i]+"\"");
-        }
-        catch (java.io.IOException e) {
-          System.out.println("IO error scanning file \""+argv[i]+"\"");
-          System.out.println(e);
-        }
-        catch (Exception e) {
-          System.out.println("Unexpected exception:");
-          e.printStackTrace();
         }
       }
     }

@@ -20,6 +20,8 @@ Alpha          = {AlphaUpperCase}|{AlphaLowerCase}
 Numeric        = [0-9]
 AlphaNumeric   = {Alpha}|{Numeric}
 Space          = "\t"|" "
+Any 		   = .
+NewLine		   = "\n"		
 
 Sign           = [+-]
 Integer        = {Sign}?(([1-9][0-9]*)|0)
@@ -27,6 +29,7 @@ Decimal        = \.[0-9]*
 Exponent       = [eE]{Integer}
 Real           = {Integer}{Decimal}?{Exponent}?
 Identifier     = {Alpha}{AlphaNumeric}*
+EndOfLine		= "\r"?"\n"
  
 //Everything     = 
 
@@ -56,4 +59,4 @@ Mon idée : créer state Comment. A l'intérieur mettre les différents Regex (e
 
 // Ignore the rest
 .               {}
-"\n"			{}
+{EndOfLine}		{}
