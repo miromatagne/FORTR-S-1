@@ -32,10 +32,8 @@ Integer        = {Sign}?(([1-9][0-9]*)|0)
 Number         = {Integer}
 VarName        = {AlphaLowerCase}{AlphaLowNumeric}*
 ProgName       = {AlphaUpperCase}{AlphaNumeric}*{AlphaLowerCase}{AlphaNumeric}*
+Comment 	   = ("/*"(.|{EndOfLine})*"*/"|"//".*)	
 
-
- 
-Comment        = "//"."\n" |"/*"."*/  " 
 
 %%// Identification of tokens
 
