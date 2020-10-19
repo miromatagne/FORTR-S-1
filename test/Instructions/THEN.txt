@@ -1,3 +1,0 @@
-== IF if 
-IF
-ELSE else if
