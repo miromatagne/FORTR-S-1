@@ -1,0 +1,6 @@
+IF.txt :
+Problems : When in the LexicalAnalyzer we put " IF " or "IF " as a identifier,
+the first IF is detected but not the second one. It is because it has to have a space " " after IF, so 
+if we end the line at IF directly it is normal that we don't detect it.
+
+When " IF" it detects very well. But we cannot write IF at the first position of the line.
