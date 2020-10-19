@@ -9,3 +9,7 @@ When " IF" it detects very well. But we cannot write IF at the first position of
 IFandVAR.txt :
 Problems : if we write jhonIF, it will detect the VarName and the "IF".
 Solution : maybe put a space in the Regex but it will cause others problems.
+
+Remark : for "IFAbc", it will detect just the ProgName and not the 'IF'
+no matter we change the order between the 2 regex {ProgrName} and "IF" in 
+LexicalAnalyzer.flex
