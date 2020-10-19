@@ -19,6 +19,7 @@ AlphaLowerCase = [a-z]
 Alpha          = {AlphaUpperCase}|{AlphaLowerCase}
 Numeric        = [0-9]
 AlphaNumeric   = {Alpha}|{Numeric}
+Space          = "\t"|" "
 
 Sign           = [+-]
 Integer        = {Sign}?(([1-9][0-9]*)|0)
@@ -26,6 +27,7 @@ Decimal        = \.[0-9]*
 Exponent       = [eE]{Integer}
 Real           = {Integer}{Decimal}?{Exponent}?
 Identifier     = {Alpha}{AlphaNumeric}*
+ 
 //Everything     = 
 
 //Comment        = "//"{Identifier}"\n"     
@@ -42,9 +44,16 @@ Mon idée : créer state Comment. A l'intérieur mettre les différents Regex (e
 "=="	        { return new Symbol(LexicalUnit.EQ,yyline, yycolumn, "==");}
 ">"		        {return new Symbol(LexicalUnit.GT,yyline, yycolumn,">");}
 
-// If/Else keywords
+// If/Else keywords  Remark : if we don't put a space between If and if (IFif), it will take the token with only IF
+// Is it correct? In my opinion : no. So we have to put above a space but it's not on point right now
 "IF"	        {return new Symbol(LexicalUnit.IF,yyline, yycolumn, "IF");}
 "THEN"          {return new Symbol(LexicalUnit.THEN,yyline, yycolumn, "THEN");}
+"ENDIF"         {return new Symbol(LexicalUnit.ENDIF,yyline, yycolumn, "ENDIF");}
 "ELSE"          {return new Symbol(LexicalUnit.ELSE,yyline, yycolumn, "ELSE");}
+"WHILE"			{return new Symbol(LexicalUnit.WHILE,yyline, yycolumn, "WHILE");}
+"DO"			{return new Symbol(LexicalUnit.DO,yyline, yycolumn, "DO");}
+"ENDWHILE"		{return new Symbol(LexicalUnit.ENDWHILE,yyline, yycolumn, "ENDWHILE");}
+
+// Ignore the rest
 .               {}
 "\n"			{}
