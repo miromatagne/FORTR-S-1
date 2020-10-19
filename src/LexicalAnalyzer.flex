@@ -5,7 +5,7 @@
 %line         	//Use line counter (yyline variable)
 %column       	//Use character counter by line (yycolumn variable)
 %type Symbol  //Says that the return type is Symbol
-%standalone
+%function nextToken
 
 // Return value of the program
 %eofval{
@@ -39,3 +39,4 @@ Identifier     = {Alpha}{AlphaNumeric}*
 "else"        {return new Symbol(LexicalUnit.ELSE,yyline, yycolumn);}
 
 .             {}
+"\n"		  {}
