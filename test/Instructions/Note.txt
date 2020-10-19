@@ -4,3 +4,8 @@ the first IF is detected but not the second one. It is because it has to have a 
 if we end the line at IF directly it is normal that we don't detect it.
 
 When " IF" it detects very well. But we cannot write IF at the first position of the line.
+
+
+IFandVAR.txt :
+Problems : if we write jhonIF, it will detect the VarName and the "IF".
+Solution : maybe put a space in the Regex but it will cause others problems.
