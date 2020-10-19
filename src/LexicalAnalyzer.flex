@@ -23,7 +23,7 @@ AlphaLowNumeric= {AlphaLowerCase}|{Numeric}
 Space          = "\t"|" "
 Any 		   = .
 NewLine		   = "\n"		
-EndLine	       = "\r"?"\n"
+EndOfLine	       = "\r"?"\n"
 
 Sign           = [+-]
 Integer        = {Sign}?(([1-9][0-9]*)|0)
@@ -77,5 +77,5 @@ Comment 	   = ("/*"(.|{EndOfLine})*"*/"|"//".*)
 
 // Ignore the rest
 .               {}
-{EndLine}		{return new Symbol(LexicalUnit.ENDLINE,yyline, yycolumn, "\\n");}
+{EndOfLine}		{return new Symbol(LexicalUnit.ENDLINE,yyline, yycolumn, "\\n");}
 
