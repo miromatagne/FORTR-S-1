@@ -5,7 +5,7 @@
 %line         	//Use line counter (yyline variable)
 %column       	//Use character counter by line (yycolumn variable)
 %type Symbol  //Says that the return type is Symbol
-%standalone
+%function nextToken
 
 // Return value of the program
 %eofval{
@@ -47,3 +47,4 @@ Mon idée : créer state Comment. A l'intérieur mettre les différents Regex (e
 "THEN"          {return new Symbol(LexicalUnit.THEN,yyline, yycolumn, "THEN");}
 "ELSE"          {return new Symbol(LexicalUnit.ELSE,yyline, yycolumn, "ELSE");}
 .               {}
+"\n"			{}
