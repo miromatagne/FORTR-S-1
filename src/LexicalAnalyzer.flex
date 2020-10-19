@@ -14,28 +14,33 @@
 
 // Extended Regular Expressions
 
-AlphaUpperCase = [A-Z]
-AlphaLowerCase = [a-z]
-Alpha          = {AlphaUpperCase}|{AlphaLowerCase}
-Numeric        = [0-9]
-AlphaNumeric   = {Alpha}|{Numeric}
-AlphaLowNumeric= {AlphaLowerCase}|{Numeric}
-Space          = "\t"|" "
-Any 		   = .
-NewLine		   = "\n"		
-EndOfLine	       = "\r"?"\n"
+AlphaUpperCase 	= [A-Z]
+AlphaLowerCase 	= [a-z]
+Alpha          	= {AlphaUpperCase}|{AlphaLowerCase}
+Numeric        	= [0-9]
+AlphaNumeric   	= {Alpha}|{Numeric}
+AlphaLowNumeric	= {AlphaLowerCase}|{Numeric}
+Space          	= "\t"|" "
+Any 		   	= .
+NewLine		   	= "\n"		
+EndOfLine	    = "\r"?"\n"
 
-Sign           = [+-]
-Integer        = {Sign}?(([1-9][0-9]*)|0)
-//Decimal      = \.[0-9]*
-//Exponent     = [eE]{Integer}
-Number         = {Integer}
-VarName        = {AlphaLowerCase}{AlphaLowNumeric}*
-ProgName       = {AlphaUpperCase}{AlphaNumeric}*{AlphaLowerCase}{AlphaNumeric}*
-Comment 	   = ("/*"(.|{EndOfLine})*"*/"|"//".*)	
+Sign           	= [+-]
+Integer        	= {Sign}?(([1-9][0-9]*)|0)
+//Decimal      	= \.[0-9]*
+//Exponent     	= [eE]{Integer}
+Number         	= {Integer}
+VarName        	= {AlphaLowerCase}{AlphaLowNumeric}*
+ProgName       	= {AlphaUpperCase}{AlphaNumeric}*{AlphaLowerCase}{AlphaNumeric}*
+Comment 	   	= ("/*"(.|{EndOfLine})*"*/"|"//".*)
+Error 		   	= {AlphaLowerCase}+[^{AlphaLowerCase}{Numeric}"\t"" "]+.{AlphaLowerCase}+	
 
 
 %%// Identification of tokens
+
+{Comment}		{System.out.println("COMMENT");}
+
+{Error}			{System.out.println("ERROR");}
 
 {ProgName}      {return new Symbol(LexicalUnit.PROGNAME,yyline, yycolumn, yytext());}
 {Number}        {return new Symbol(LexicalUnit.NUMBER,yyline, yycolumn, yytext());}
