@@ -22,7 +22,7 @@ public enum LexicalUnit{
     WHILE, //TGL
     DO, //TGL
     ENDWHILE, //TGL
-    PRINT,
-    READ,
+    PRINT, //MMM
+    READ, //MMM
     EOS  //MMM
 }

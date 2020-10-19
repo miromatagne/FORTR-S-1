@@ -8,7 +8,7 @@ BEGINPROG Factorial
 
 IF (number > -1) THEN
   WHILE number > 0 DO 
-    reSult := result * number
+    result := result * number
     number := number - 1   // decrease number
   ENDWHILE
   ELSE                      // The input number is negative

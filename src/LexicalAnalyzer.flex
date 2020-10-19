@@ -58,17 +58,22 @@ Error 		   	= {AlphaLowerCase}+[^{AlphaLowerCase}{Numeric}"\t"" "]+.{AlphaLowerC
 "*"				{return new Symbol(LexicalUnit.TIMES,yyline, yycolumn, "*");}
 "/"				{return new Symbol(LexicalUnit.DIVIDE,yyline, yycolumn, "/");}
 
-//Check for parenthesis
+//Check for parenthesis or commas
 "("				{return new Symbol(LexicalUnit.LPAREN,yyline, yycolumn, "(");}
 ")"				{return new Symbol(LexicalUnit.RPAREN,yyline, yycolumn, ")");}
+","             {return new Symbol(LexicalUnit.COMMA,yyline, yycolumn, ",");}
 
 // Relational operators
 "=="	        { return new Symbol(LexicalUnit.EQ,yyline, yycolumn, "==");}
 ">"		        {return new Symbol(LexicalUnit.GT,yyline, yycolumn,">");}
 
+//PRINT and READ commands
+"PRINT"	        {return new Symbol(LexicalUnit.PRINT,yyline, yycolumn, "PRINT");}
+"READ"	        {return new Symbol(LexicalUnit.READ,yyline, yycolumn, "READ");}
+
+
 // If/Else keywords  Remark : if we don't put a space between If and if (IFif), it will take the token with only IF
 // Is it correct? In my opinion : no. So we have to put above a space but it's not on point right now
-
 "IF"	        {return new Symbol(LexicalUnit.IF,yyline, yycolumn, "IF");}
 "THEN"          {return new Symbol(LexicalUnit.THEN,yyline, yycolumn, "THEN");}
 "ENDIF"         {return new Symbol(LexicalUnit.ENDIF,yyline, yycolumn, "ENDIF");}
@@ -76,8 +81,6 @@ Error 		   	= {AlphaLowerCase}+[^{AlphaLowerCase}{Numeric}"\t"" "]+.{AlphaLowerC
 "WHILE"			{return new Symbol(LexicalUnit.WHILE,yyline, yycolumn, "WHILE");}
 "DO"			{return new Symbol(LexicalUnit.DO,yyline, yycolumn, "DO");}
 "ENDWHILE"		{return new Symbol(LexicalUnit.ENDWHILE,yyline, yycolumn, "ENDWHILE");}
-
-","             {return new Symbol(LexicalUnit.COMMA,yyline, yycolumn, ",");}
 
 
 // Ignore the rest
