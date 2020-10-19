@@ -1,7 +1,7 @@
 public enum LexicalUnit{
     BEGINPROG, //MMM
     PROGNAME,
-    ENDLINE,
+    ENDLINE, //MMM
     ENDPROG, //MMM
     COMMA,
     VARNAME,
@@ -24,5 +24,5 @@ public enum LexicalUnit{
     ENDWHILE, //TGL
     PRINT,
     READ,
-    EOS
+    EOS //MMM
 }
