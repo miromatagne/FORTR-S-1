@@ -31,9 +31,9 @@ Integer        	= {Sign}?(([1-9][0-9]*)|0)
 //Exponent     	= [eE]{Integer}
 Number         	= (([1-9][0-9]*)|0)
 VarName        	= {AlphaLowerCase}{AlphaLowNumeric}*
-ProgName       	= {AlphaUpperCase}{AlphaNumeric}*{AlphaLowerCase}{AlphaNumeric}*
+ProgName       	= {AlphaUpperCase}{AlphaNumeric}*{AlphaLowerCase}+{AlphaNumeric}*
 Comment 	   	= ("/*"(.|{EndOfLine})*"*/"|"//".*)
-Error 		   	= {AlphaLowerCase}+[^{AlphaLowerCase}{Numeric}"\t"" "]+.{AlphaLowerCase}+	
+Error 		   	= {AlphaLowNumeric}+[^{AlphaLowerCase}{Numeric}"\t"" "]+.{AlphaLowerCase}+	
 
 
 %%// Identification of tokens

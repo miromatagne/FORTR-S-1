@@ -1,0 +1,13 @@
+4828Hfkql
+// Output : ERROR. It should output : ERROR OK
+
+4828hfkql
+// Output : token : 4828 and token : hfkql. It should output : ERROR
+
+4828Hfkql
+Ljhon
+// Output : ERROR and token : Ljhon. It should output : ERROR and token : Ljhon OK
+
+4828hfkql
+Ljhon
+// Output : ERROR. It should output : ERROR and token : Ljhon 
