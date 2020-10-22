@@ -35,7 +35,8 @@ VarName        	= {AlphaLowerCase}{AlphaLowNumeric}*
 ProgName       	= {AlphaUpperCase}+{AlphaLowNumeric}+{AlphaNumeric}*
 Comment 	   	= ("/*"(.|{EndOfLine})*"*/"|"//".*)
 
-VarnameError 	= {AlphaLowerCase}+{AlphaLowNumeric}*[^{AlphaLowerCase}{Numeric}"\t"" ""\n""\r\n"]+[^"\t"" ""\n""\r\n"]*
+//VarnameError 	= {AlphaLowerCase}+{AlphaLowNumeric}*[^{AlphaLowerCase}{Numeric}"\t"" ""\n""\r\n"]+[^"\t"" ""\n""\r\n"]*
+VarnameError 	= {AlphaLowerCase}+{AlphaLowNumeric}*{AlphaUpperCase}+{AlphaNumeric}*
 ProgNameError 	= {AlphaUpperCase}+ 
 NumError		= {Numeric}+{Alpha}+{AlphaNumeric}*
 
@@ -43,7 +44,7 @@ NumError		= {Numeric}+{Alpha}+{AlphaNumeric}*
 
 {Comment}		{System.out.println("COMMENT");}
 
-{VarnameError}			{System.out.println("ERROR :" + yytext());}
+{VarnameError}			{System.out.println("VAR ERROR :" + yytext());}
 {NumError}				{System.out.println("NUM ERROR :" + yytext());}
 
 {ProgName}      {return new Symbol(LexicalUnit.PROGNAME,yyline, yycolumn, yytext());}
@@ -88,7 +89,8 @@ NumError		= {Numeric}+{Alpha}+{AlphaNumeric}*
 
 
 // Ignore the rest
-{ProgNameError}			{System.out.println("PROGNAME ERROR :" + yytext());}
-.               {}
+{ProgNameError}	{System.out.println("PROGNAME ERROR :" + yytext());}
+{Space}         {}
+.               {System.out.println("ERROR :" + yytext());}
 {EndOfLine}		{return new Symbol(LexicalUnit.ENDLINE,yyline, yycolumn, "\\n");}
 
