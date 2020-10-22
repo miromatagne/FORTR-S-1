@@ -27,7 +27,9 @@ public class Main{
           receivedSymbol = scanner.nextToken();
         }
         Iterator it = variables.entrySet().iterator();
-        System.out.println("\nVariables");
+        if(it.hasNext()){
+          System.out.println("\nVariables");
+        }
         while (it.hasNext()) {
           Map.Entry pair = (Map.Entry)it.next();
           System.out.println(pair.getKey() + "\t" + pair.getValue());
