@@ -33,16 +33,16 @@ Number         	= (([1-9][0-9]*)|0)
 VarName        	= {AlphaLowerCase}{AlphaLowNumeric}*
 ProgName       	= {AlphaUpperCase}+{AlphaLowNumeric}+{AlphaNumeric}*
 Comment 	   	= ("/*"(.|{EndOfLine})*"*/"|"//".*)
-//Error 		   	= {AlphaLowNumeric}+[^{AlphaLowerCase}{Numeric}"\t"" "]+.{AlphaLowerCase}+	
-Error 		   	= {AlphaLowNumeric}+[^{AlphaLowerCase}{Numeric}"\t"" "]+[{Space}|{EndOfLine}]  //[^"\t"" "{EndOfLine}]*
-ErrorProgName   = {AlphaUpperCase}+
+VarnameError 	= {AlphaLowerCase}+{AlphaLowNumeric}*[^{AlphaLowerCase}{Numeric}"\t"" ""\n""\r\n"]+[^"\t"" ""\n""\r\n"]*
+ProgNameError 	= {AlphaUpperCase}+ 
+NumError		= {Numeric}+{Alpha}+{AlphaNumeric}*
 
 %%// Identification of tokens
 
 {Comment}		{System.out.println("COMMENT");}
 
-{Error}			{System.out.println("ERROR :" + yytext());}
-{ErrorProgName} {System.out.println("ERROR");}
+{VarnameError}			{System.out.println("ERROR :" + yytext());}
+{NumError}				{System.out.println("NUM ERROR :" + yytext());}
 
 {ProgName}      {return new Symbol(LexicalUnit.PROGNAME,yyline, yycolumn, yytext());}
 {Number}        {return new Symbol(LexicalUnit.NUMBER,yyline, yycolumn, yytext());}
@@ -86,6 +86,7 @@ ErrorProgName   = {AlphaUpperCase}+
 
 
 // Ignore the rest
+{ProgNameError}			{System.out.println("PROGNAME ERROR :" + yytext());}
 .               {}
 {EndOfLine}		{return new Symbol(LexicalUnit.ENDLINE,yyline, yycolumn, "\\n");}
 
