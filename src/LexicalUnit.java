@@ -3,10 +3,10 @@ public enum LexicalUnit{
     PROGNAME,  //TGL OK 
     ENDLINE,  //MMM
     ENDPROG, //MMM
-    COMMA,   //TGL   not OK
+    COMMA,   //TGL   OK
     VARNAME, //TGL   OK
-    ASSIGN,  //TGL   not OK
-    NUMBER,  //TGL   not OK
+    ASSIGN,  //TGL   OK
+    NUMBER,  //TGL   OK
     LPAREN, //MMM
     RPAREN, //MMM
     MINUS, //MMM
@@ -17,8 +17,8 @@ public enum LexicalUnit{
     THEN, //TGL     OK
     ENDIF, //TGL    OK
     ELSE, //TGL     OK
-    EQ, //TGL       not OK
-    GT, //TGL       not OK
+    EQ, //TGL       OK
+    GT, //TGL       OK
     WHILE, //TGL    OK
     DO, //TGL       OK
     ENDWHILE, //TGL OK
