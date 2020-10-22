@@ -8,7 +8,7 @@ import java.util.Iterator;
 
     Students :
         -MATAGNE Miro-Manuel (459668)
-        -TRAN NGOC Linh
+        -TRAN NGOC Linh (459764)
     
     Design of a lexical analyzer for a FORTR-S compiler
 */
