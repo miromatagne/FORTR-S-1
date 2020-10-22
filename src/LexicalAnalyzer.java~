@@ -802,7 +802,7 @@ class LexicalAnalyzer {
             // fall through
           case 45: break;
           case 16:
-            { return new Symbol(LexicalUnit.ASSIGN,yyline, yycolumn, ":=");
+            { return new Symbol(LexicalUnit.ASSIGN,yyline, yycolumn, yytext());
             }
             // fall through
           case 46: break;

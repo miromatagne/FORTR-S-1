@@ -1,12 +1,12 @@
 public enum LexicalUnit{
     BEGINPROG, //MMM
-    PROGNAME,  //TGL
+    PROGNAME,  //TGL OK 
     ENDLINE,  //MMM
     ENDPROG, //MMM
-    COMMA,   //TGL
-    VARNAME, //TGL
-    ASSIGN,  //TGL
-    NUMBER,  //TGL  not OK
+    COMMA,   //TGL   not OK
+    VARNAME, //TGL   OK
+    ASSIGN,  //TGL   not OK
+    NUMBER,  //TGL   not OK
     LPAREN, //MMM
     RPAREN, //MMM
     MINUS, //MMM
