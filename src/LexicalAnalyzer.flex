@@ -31,16 +31,18 @@ Integer        	= {Sign}?(([1-9][0-9]*)|0)
 //Exponent     	= [eE]{Integer}
 Number         	= (([1-9][0-9]*)|0)
 VarName        	= {AlphaLowerCase}{AlphaLowNumeric}*
-ProgName       	= {AlphaUpperCase}{AlphaNumeric}*{AlphaLowerCase}+{AlphaNumeric}*
+ProgName       	= {AlphaUpperCase}+{AlphaLowNumeric}+{AlphaNumeric}*
 Comment 	   	= ("/*"(.|{EndOfLine})*"*/"|"//".*)
-Error 		   	= {AlphaLowNumeric}+[^{AlphaLowerCase}{Numeric}"\t"" "]+.{AlphaLowerCase}+	
-
+//Error 		   	= {AlphaLowNumeric}+[^{AlphaLowerCase}{Numeric}"\t"" "]+.{AlphaLowerCase}+	
+Error 		   	= {AlphaLowNumeric}+[^{AlphaLowerCase}{Numeric}"\t"" "]+[{Space}|{EndOfLine}]  //[^"\t"" "{EndOfLine}]*
+ErrorProgName   = {AlphaUpperCase}+
 
 %%// Identification of tokens
 
 {Comment}		{System.out.println("COMMENT");}
 
-{Error}			{System.out.println("ERROR");}
+{Error}			{System.out.println("ERROR :" + yytext());}
+{ErrorProgName} {System.out.println("ERROR");}
 
 {ProgName}      {return new Symbol(LexicalUnit.PROGNAME,yyline, yycolumn, yytext());}
 {Number}        {return new Symbol(LexicalUnit.NUMBER,yyline, yycolumn, yytext());}

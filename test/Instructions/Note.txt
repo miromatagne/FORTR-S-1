@@ -13,3 +13,14 @@ Solution : maybe put a space in the Regex but it will cause others problems.
 Remark : for "IFAbc", it will detect just the ProgName and not the 'IF'
 no matter we change the order between the 2 regex {ProgrName} and "IF" in 
 LexicalAnalyzer.flex
+
+We have struggled a lot with the regex Error, because at first it detected error even with 
+two words that are separated like "4gL let".
+So we modify it and now it detects when : 
+-a word starts with a number
+-a VarName that has a upper case in it
+-a ProgName that only have upper case in it
+
+Problem : detect 1al
+Detect 1Al 
+But detect also 1al // 
