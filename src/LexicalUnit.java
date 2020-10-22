@@ -6,22 +6,22 @@ public enum LexicalUnit{
     COMMA,   //TGL
     VARNAME, //TGL
     ASSIGN,  //TGL
-    NUMBER,  //TGL
+    NUMBER,  //TGL  not OK
     LPAREN, //MMM
     RPAREN, //MMM
     MINUS, //MMM
     PLUS, //MMM
     TIMES, //MMM
     DIVIDE, //MMM
-    IF, //TGL
-    THEN, //TGL
-    ENDIF, //TGL
-    ELSE, //TGL
-    EQ, //TGL
-    GT, //TGL
-    WHILE, //TGL
-    DO, //TGL
-    ENDWHILE, //TGL
+    IF, //TGL       OK
+    THEN, //TGL     OK
+    ENDIF, //TGL    OK
+    ELSE, //TGL     OK
+    EQ, //TGL       not OK
+    GT, //TGL       not OK
+    WHILE, //TGL    OK
+    DO, //TGL       OK
+    ENDWHILE, //TGL OK
     PRINT, //MMM
     READ, //MMM
     EOS  //MMM

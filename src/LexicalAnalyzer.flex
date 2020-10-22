@@ -41,7 +41,7 @@ ErrorProgName   = {AlphaUpperCase}+
 
 {Comment}		{System.out.println("COMMENT");}
 
-{Error}			{System.out.println("ERROR :" + yytext());}
+{Error}			{System.out.println("ERRORYOOOO");}
 {ErrorProgName} {System.out.println("ERROR");}
 
 {ProgName}      {return new Symbol(LexicalUnit.PROGNAME,yyline, yycolumn, yytext());}
