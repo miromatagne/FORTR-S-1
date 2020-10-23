@@ -1,0 +1,38 @@
+NUM ERROR :42Hkql
+token: \n             lexical unit: ENDLINE
+token: \n             lexical unit: ENDLINE
+NUM ERROR :12abcd
+token: \n             lexical unit: ENDLINE
+token: \n             lexical unit: ENDLINE
+PROGNAME ERROR :A
+token: \n             lexical unit: ENDLINE
+PROGNAME ERROR :AA
+token: \n             lexical unit: ENDLINE
+VARNAME ERROR :aB
+token: \n             lexical unit: ENDLINE
+VARNAME ERROR :abC
+token: \n             lexical unit: ENDLINE
+VARNAME ERROR :aBc
+token: \n             lexical unit: ENDLINE
+VARNAME ERROR :abCd
+token: \n             lexical unit: ENDLINE
+token: \n             lexical unit: ENDLINE
+token: 1              lexical unit: NUMBER
+token: (              lexical unit: LPAREN
+token: abcd           lexical unit: VARNAME
+token: \n             lexical unit: ENDLINE
+token: \n             lexical unit: ENDLINE
+
+NUM ERROR :1ABCD     
+token: \n             lexical unit: ENDLINE
+NUM ERROR :1abcd
+token: \n             lexical unit: ENDLINE
+token: \n             lexical unit: ENDLINE
+token: a              lexical unit: VARNAME
+ERROR :! 
+token: hge            lexical unit: VARNAME
+
+Variables
+abcd    12
+a       17
+hge     17

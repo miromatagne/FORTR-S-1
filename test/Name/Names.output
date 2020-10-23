@@ -1,0 +1,23 @@
+token: Factorial      lexical unit: PROGNAME
+token: \n             lexical unit: ENDLINE
+PROGNAME ERROR : FACTORIAL 
+token: \n             lexical unit: ENDLINE
+token: Factor1al      lexical unit: PROGNAME
+token: \n             lexical unit: ENDLINE
+
+token: \n             lexical unit: ENDLINE
+
+token: \n             lexical unit: ENDLINE
+
+token: \n             lexical unit: ENDLINE
+
+
+token: (              lexical unit: LPAREN
+token: number         lexical unit: VARNAME
+token: >              lexical unit: GT
+token: -              lexical unit: MINUS
+token: 1              lexical unit: NUMBER
+token: )              lexical unit: RPAREN
+
+Variables
+number  3

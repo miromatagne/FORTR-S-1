@@ -1,0 +1,39 @@
+token: a              lexical unit: VARNAME
+token: :=             lexical unit: ASSIGN
+token: 3              lexical unit: NUMBER
+token: \n             lexical unit: ENDLINE
+token: a              lexical unit: VARNAME
+token: ==             lexical unit: EQ
+token: 3              lexical unit: NUMBER
+token: \n             lexical unit: ENDLINE
+token: a              lexical unit: VARNAME
+token: ==             lexical unit: EQ
+token: 3              lexical unit: NUMBER
+token: \n             lexical unit: ENDLINE
+token: a              lexical unit: VARNAME
+token: ==             lexical unit: EQ
+token: 3              lexical unit: NUMBER
+token: \n             lexical unit: ENDLINE
+token: a              lexical unit: VARNAME
+token: ==             lexical unit: EQ
+token: 3              lexical unit: NUMBER
+token: \n             lexical unit: ENDLINE
+token: \n             lexical unit: ENDLINE
+token: a              lexical unit: VARNAME
+token: >              lexical unit: GT
+token: 2              lexical unit: NUMBER
+token: \n             lexical unit: ENDLINE
+token: a              lexical unit: VARNAME
+token: >              lexical unit: GT
+token: 2              lexical unit: NUMBER
+token: \n             lexical unit: ENDLINE
+token: a              lexical unit: VARNAME
+token: >              lexical unit: GT
+token: 2              lexical unit: NUMBER
+token: \n             lexical unit: ENDLINE
+token: a              lexical unit: VARNAME
+token: >              lexical unit: GT
+token: 2              lexical unit: NUMBER
+
+Variables
+a       1
