@@ -1,4 +1,4 @@
-import java.util.LinkedHashMap;
+import java.util.TreeMap;
 import java.util.Map;
 import java.util.Map.Entry;
 import java.util.Iterator;
@@ -27,7 +27,7 @@ public class Main{
         scanner = new LexicalAnalyzer(reader);
         
         //Initialization of the symbol table, stored in a Map
-        Map<String,Integer> symbolTable = new LinkedHashMap<String,Integer>();
+        Map<String,Integer> symbolTable = new TreeMap<String,Integer>();
         
         //Read all the symbols returned by the lexical analyzer unitl the EOS Symbol,
         //indicating the end of the file

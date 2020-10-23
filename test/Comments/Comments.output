@@ -1,0 +1,16 @@
+token: \n             lexical unit: ENDLINE
+token: \n             lexical unit: ENDLINE
+token: b              lexical unit: VARNAME
+token: ==             lexical unit: EQ
+token: 1              lexical unit: NUMBER
+token: \n             lexical unit: ENDLINE
+token: \n             lexical unit: ENDLINE
+token: \n             lexical unit: ENDLINE
+token: \n             lexical unit: ENDLINE
+token: abcd           lexical unit: VARNAME
+token: :=             lexical unit: ASSIGN
+token: 1              lexical unit: NUMBER
+
+Variables
+abcd    15
+b       3
