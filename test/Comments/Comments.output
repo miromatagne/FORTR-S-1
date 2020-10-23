@@ -12,5 +12,5 @@ token: :=             lexical unit: ASSIGN
 token: 1              lexical unit: NUMBER
 
 Variables
-abcd    15
-b       3
+abcd   15
+b      3

@@ -8,13 +8,13 @@ PROGNAME ERROR :A
 token: \n             lexical unit: ENDLINE
 PROGNAME ERROR :AA
 token: \n             lexical unit: ENDLINE
-VARNAME ERROR :aB
+VAR ERROR :aB
 token: \n             lexical unit: ENDLINE
-VARNAME ERROR :abC
+VAR ERROR :abC
 token: \n             lexical unit: ENDLINE
-VARNAME ERROR :aBc
+VAR ERROR :aBc
 token: \n             lexical unit: ENDLINE
-VARNAME ERROR :abCd
+VAR ERROR :abCd
 token: \n             lexical unit: ENDLINE
 token: \n             lexical unit: ENDLINE
 token: 1              lexical unit: NUMBER
@@ -22,7 +22,6 @@ token: (              lexical unit: LPAREN
 token: abcd           lexical unit: VARNAME
 token: \n             lexical unit: ENDLINE
 token: \n             lexical unit: ENDLINE
-
 NUM ERROR :1ABCD     
 token: \n             lexical unit: ENDLINE
 NUM ERROR :1abcd
@@ -33,6 +32,6 @@ ERROR :!
 token: hge            lexical unit: VARNAME
 
 Variables
-abcd    12
 a       17
+abcd    12
 hge     17

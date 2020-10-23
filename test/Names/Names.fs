@@ -1,5 +1,5 @@
 Factorial
-FACTORIAl 
+FACTORIAL
 Factor1al
 FACTOR1AL 
 

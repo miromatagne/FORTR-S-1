@@ -1,6 +1,6 @@
 token: Factorial      lexical unit: PROGNAME
 token: \n             lexical unit: ENDLINE
-PROGNAME ERROR : FACTORIAL 
+PROGNAME ERROR :FACTORIAL 
 token: \n             lexical unit: ENDLINE
 token: Factor1al      lexical unit: PROGNAME
 token: \n             lexical unit: ENDLINE
@@ -9,9 +9,8 @@ token: \n             lexical unit: ENDLINE
 token: \n             lexical unit: ENDLINE
 token: factorial      lexical unit: VARNAME
 token: \n             lexical unit: ENDLINE
-token: \n             lexical unit: ENDLINE
 token: factor1al      lexical unit: VARNAME
 
 Variables
-factorial       6
 factor1al       7
+factorial       6
