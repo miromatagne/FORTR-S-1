@@ -1,0 +1,168 @@
+token: addition       lexical unit: VARNAME
+token: :=             lexical unit: ASSIGN
+token: 3              lexical unit: NUMBER
+token: +              lexical unit: PLUS
+token: 3              lexical unit: NUMBER
+token: \n             lexical unit: ENDLINE
+token: addition2      lexical unit: VARNAME
+token: :=             lexical unit: ASSIGN
+token: 3              lexical unit: NUMBER
+token: +              lexical unit: PLUS
+token: 3              lexical unit: NUMBER
+token: +              lexical unit: PLUS
+token: 7              lexical unit: NUMBER
+token: \n             lexical unit: ENDLINE
+token: addition3      lexical unit: VARNAME
+token: :=             lexical unit: ASSIGN
+token: 3              lexical unit: NUMBER
+token: +              lexical unit: PLUS
+token: 3              lexical unit: NUMBER
+token: \n             lexical unit: ENDLINE
+token: addition4      lexical unit: VARNAME
+token: :=             lexical unit: ASSIGN
+token: 3              lexical unit: NUMBER
+token: +              lexical unit: PLUS
+token: 3              lexical unit: NUMBER
+token: +              lexical unit: PLUS
+token: 7              lexical unit: NUMBER
+token: \n             lexical unit: ENDLINE
+token: addition5      lexical unit: VARNAME
+token: :=             lexical unit: ASSIGN
+token: 3              lexical unit: NUMBER
+token: +              lexical unit: PLUS
+token: 3              lexical unit: NUMBER
+token: +              lexical unit: PLUS
+token: 7              lexical unit: NUMBER
+token: \n             lexical unit: ENDLINE
+token: \n             lexical unit: ENDLINE
+token: division       lexical unit: VARNAME
+token: :=             lexical unit: ASSIGN
+token: 3              lexical unit: NUMBER
+token: /              lexical unit: DIVIDE
+token: 3              lexical unit: NUMBER
+token: \n             lexical unit: ENDLINE
+token: division2      lexical unit: VARNAME
+token: :=             lexical unit: ASSIGN
+token: 3              lexical unit: NUMBER
+token: /              lexical unit: DIVIDE
+token: 3              lexical unit: NUMBER
+token: /              lexical unit: DIVIDE
+token: 7              lexical unit: NUMBER
+token: \n             lexical unit: ENDLINE
+token: division3      lexical unit: VARNAME
+token: :=             lexical unit: ASSIGN
+token: 3              lexical unit: NUMBER
+token: /              lexical unit: DIVIDE
+token: 3              lexical unit: NUMBER
+token: \n             lexical unit: ENDLINE
+token: division4      lexical unit: VARNAME
+token: :=             lexical unit: ASSIGN
+token: 3              lexical unit: NUMBER
+token: /              lexical unit: DIVIDE
+token: 3              lexical unit: NUMBER
+token: /              lexical unit: DIVIDE
+token: 7              lexical unit: NUMBER
+token: \n             lexical unit: ENDLINE
+token: division5      lexical unit: VARNAME
+token: :=             lexical unit: ASSIGN
+token: 3              lexical unit: NUMBER
+token: /              lexical unit: DIVIDE
+token: 3              lexical unit: NUMBER
+token: /              lexical unit: DIVIDE
+token: 7              lexical unit: NUMBER
+token: \n             lexical unit: ENDLINE
+token: \n             lexical unit: ENDLINE
+token: multiplication lexical unit: VARNAME
+token: :=             lexical unit: ASSIGN
+token: 3              lexical unit: NUMBER
+token: *              lexical unit: TIMES
+token: 3              lexical unit: NUMBER
+token: \n             lexical unit: ENDLINE
+token: multiplication2lexical unit: VARNAME
+token: :=             lexical unit: ASSIGN
+token: 3              lexical unit: NUMBER
+token: *              lexical unit: TIMES
+token: 3              lexical unit: NUMBER
+token: *              lexical unit: TIMES
+token: 7              lexical unit: NUMBER
+token: \n             lexical unit: ENDLINE
+token: multiplication3lexical unit: VARNAME
+token: :=             lexical unit: ASSIGN
+token: 3              lexical unit: NUMBER
+token: *              lexical unit: TIMES
+token: 3              lexical unit: NUMBER
+token: \n             lexical unit: ENDLINE
+token: multiplication4lexical unit: VARNAME
+token: :=             lexical unit: ASSIGN
+token: 3              lexical unit: NUMBER
+token: *              lexical unit: TIMES
+token: 3              lexical unit: NUMBER
+token: *              lexical unit: TIMES
+token: 7              lexical unit: NUMBER
+token: \n             lexical unit: ENDLINE
+token: multiplication5lexical unit: VARNAME
+token: :=             lexical unit: ASSIGN
+token: 3              lexical unit: NUMBER
+token: *              lexical unit: TIMES
+token: 3              lexical unit: NUMBER
+token: *              lexical unit: TIMES
+token: 7              lexical unit: NUMBER
+token: \n             lexical unit: ENDLINE
+token: \n             lexical unit: ENDLINE
+token: substraction   lexical unit: VARNAME
+token: :=             lexical unit: ASSIGN
+token: 3              lexical unit: NUMBER
+token: -              lexical unit: MINUS
+token: 3              lexical unit: NUMBER
+token: \n             lexical unit: ENDLINE
+token: substraction2  lexical unit: VARNAME
+token: :=             lexical unit: ASSIGN
+token: 3              lexical unit: NUMBER
+token: -              lexical unit: MINUS
+token: 3              lexical unit: NUMBER
+token: -              lexical unit: MINUS
+token: 7              lexical unit: NUMBER
+token: \n             lexical unit: ENDLINE
+token: substraction3  lexical unit: VARNAME
+token: :=             lexical unit: ASSIGN
+token: 3              lexical unit: NUMBER
+token: -              lexical unit: MINUS
+token: 3              lexical unit: NUMBER
+token: \n             lexical unit: ENDLINE
+token: substraction4  lexical unit: VARNAME
+token: :=             lexical unit: ASSIGN
+token: 3              lexical unit: NUMBER
+token: -              lexical unit: MINUS
+token: 3              lexical unit: NUMBER
+token: -              lexical unit: MINUS
+token: 7              lexical unit: NUMBER
+token: \n             lexical unit: ENDLINE
+token: substraction5  lexical unit: VARNAME
+token: :=             lexical unit: ASSIGN
+token: 3              lexical unit: NUMBER
+token: -              lexical unit: MINUS
+token: 3              lexical unit: NUMBER
+token: -              lexical unit: MINUS
+token: 7              lexical unit: NUMBER
+
+Variables
+addition        1
+addition2       2
+addition3       3
+addition4       4
+addition5       5
+division        7
+division2       8
+division3       9
+division4       10
+division5       11
+multiplication  13
+multiplication2 14
+multiplication3 15
+multiplication4 16
+multiplication5 17
+substraction    19
+substraction2   20
+substraction3   21
+substraction4   22
+substraction5   23

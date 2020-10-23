@@ -7,4 +7,6 @@ PRINT(beginprog)
 PRINT(BeginProg)
 PRINT(endprog)
 PRINT(EndProg)
+READ(number)
+READ(number)
 ENDPROG

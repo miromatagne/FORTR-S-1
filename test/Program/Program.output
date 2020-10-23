@@ -1,0 +1,55 @@
+token: BEGINPROG      lexical unit: BEGINPROG
+token: ProgName       lexical unit: PROGNAME
+token: \n             lexical unit: ENDLINE
+token: beginprog      lexical unit: VARNAME
+token: :=             lexical unit: ASSIGN
+token: 1              lexical unit: NUMBER
+token: \n             lexical unit: ENDLINE
+token: BeginProg      lexical unit: PROGNAME
+token: :=             lexical unit: ASSIGN
+token: 3              lexical unit: NUMBER
+token: \n             lexical unit: ENDLINE
+token: endprog        lexical unit: VARNAME
+token: :=             lexical unit: ASSIGN
+token: 2              lexical unit: NUMBER
+token: \n             lexical unit: ENDLINE
+token: EndProg        lexical unit: PROGNAME
+token: :=             lexical unit: ASSIGN
+token: 7              lexical unit: NUMBER
+token: \n             lexical unit: ENDLINE
+token: PRINT          lexical unit: PRINT
+token: (              lexical unit: LPAREN
+token: beginprog      lexical unit: VARNAME
+token: )              lexical unit: RPAREN
+token: \n             lexical unit: ENDLINE
+token: PRINT          lexical unit: PRINT
+token: (              lexical unit: LPAREN
+token: BeginProg      lexical unit: PROGNAME
+token: )              lexical unit: RPAREN
+token: \n             lexical unit: ENDLINE
+token: PRINT          lexical unit: PRINT
+token: (              lexical unit: LPAREN
+token: endprog        lexical unit: VARNAME
+token: )              lexical unit: RPAREN
+token: \n             lexical unit: ENDLINE
+token: PRINT          lexical unit: PRINT
+token: (              lexical unit: LPAREN
+token: EndProg        lexical unit: PROGNAME
+token: )              lexical unit: RPAREN
+token: \n             lexical unit: ENDLINE
+token: READ           lexical unit: READ
+token: (              lexical unit: LPAREN
+token: number         lexical unit: VARNAME
+token: )              lexical unit: RPAREN
+token: \n             lexical unit: ENDLINE
+token: READ           lexical unit: READ
+token: (              lexical unit: LPAREN
+token: number         lexical unit: VARNAME
+token: )              lexical unit: RPAREN
+token: \n             lexical unit: ENDLINE
+token: ENDPROG        lexical unit: ENDPROG
+
+Variables
+beginprog        2
+endprog          4
+number           10

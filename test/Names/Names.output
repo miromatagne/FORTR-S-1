@@ -4,20 +4,14 @@ PROGNAME ERROR : FACTORIAL
 token: \n             lexical unit: ENDLINE
 token: Factor1al      lexical unit: PROGNAME
 token: \n             lexical unit: ENDLINE
-
+token: FACTOR1AL      lexical unit: PROGNAME
 token: \n             lexical unit: ENDLINE
-
 token: \n             lexical unit: ENDLINE
-
+token: factorial      lexical unit: VARNAME
 token: \n             lexical unit: ENDLINE
-
-
-token: (              lexical unit: LPAREN
-token: number         lexical unit: VARNAME
-token: >              lexical unit: GT
-token: -              lexical unit: MINUS
-token: 1              lexical unit: NUMBER
-token: )              lexical unit: RPAREN
+token: \n             lexical unit: ENDLINE
+token: factor1al      lexical unit: VARNAME
 
 Variables
-number  3
+factorial       6
+factor1al       7

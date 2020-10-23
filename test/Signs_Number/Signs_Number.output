@@ -1,0 +1,45 @@
+token: a              lexical unit: VARNAME
+token: :=             lexical unit: ASSIGN 
+token: 3              lexical unit: NUMBER 
+token: ,              lexical unit: COMMA  
+token: \n             lexical unit: ENDLINE
+token: a              lexical unit: VARNAME
+token: :=             lexical unit: ASSIGN 
+token: 3              lexical unit: NUMBER 
+token: ,              lexical unit: COMMA  
+token: \n             lexical unit: ENDLINE
+token: b              lexical unit: VARNAME
+token: :=             lexical unit: ASSIGN 
+token: 34             lexical unit: NUMBER 
+token: ,              lexical unit: COMMA  
+token: \n             lexical unit: ENDLINE
+token: b              lexical unit: VARNAME
+token: :=             lexical unit: ASSIGN
+token: 34             lexical unit: NUMBER
+token: ,              lexical unit: COMMA
+token: \n             lexical unit: ENDLINE
+token: c              lexical unit: VARNAME
+token: :=             lexical unit: ASSIGN
+token: 248            lexical unit: NUMBER
+token: ,              lexical unit: COMMA
+token: \n             lexical unit: ENDLINE
+token: c              lexical unit: VARNAME
+token: :=             lexical unit: ASSIGN
+token: 248            lexical unit: NUMBER
+token: ,              lexical unit: COMMA
+token: \n             lexical unit: ENDLINE
+token: d              lexical unit: VARNAME
+token: :=             lexical unit: ASSIGN
+token: 8              lexical unit: NUMBER
+token: ,              lexical unit: COMMA
+token: \n             lexical unit: ENDLINE
+token: d              lexical unit: VARNAME
+token: :=             lexical unit: ASSIGN
+token: 8              lexical unit: NUMBER
+token: ,              lexical unit: COMMA
+
+Variables
+a       1
+b       3
+c       5
+d       7
