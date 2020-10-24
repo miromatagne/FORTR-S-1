@@ -7,7 +7,7 @@ public enum LexicalUnit{
     VARNAME, //TGL   OK
     ASSIGN,  //TGL   OK
     NUMBER,  //TGL   OK
-    LPAREN, //MMM    OK  Afficher variables a la fin des .output?
+    LPAREN, //MMM    OK
     RPAREN, //MMM    OK
     MINUS, //MMM     OK
     PLUS, //MMM      OK
