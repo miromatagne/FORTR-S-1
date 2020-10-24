@@ -16,10 +16,10 @@ LexicalAnalyzer.flex
 
 We have struggled a lot with the regex Error, because at first it detected error even with 
 two words that are separated like "4gL let".
-So we modify it and now it detects when : 
+So we modify it and now it detects : 
 -a word starts with a number
--a VarName that has a upper case in it
--a ProgName that only have upper case in it  //ignored
+-a VarName that has an upper case in it
+-a ProgName that only have upper case in it 
 
 Problem : detect 1al
 Detect 1Al 

@@ -51,7 +51,7 @@ NumError		= {Numeric}+{Alpha}+{AlphaNumeric}*
 %%// Identification of tokens
 
 <YYINITIAL>{
-							{commentDepth++;yybegin(COMMENT);}
+	"/*"				{commentDepth++;yybegin(COMMENT);}
 	{InlineComment}		{System.out.println("INLINE COMMENT");}
 
 	{VarnameError}	{System.out.println("VAR ERROR :" + yytext());}
