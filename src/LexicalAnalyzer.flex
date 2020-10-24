@@ -23,17 +23,18 @@
 
 AlphaUpperCase 	= [A-Z]
 AlphaLowerCase 	= [a-z]
-Alpha          	= {AlphaUpperCase}|{AlphaLowerCase}
+//Alpha          	= {AlphaUpperCase}|{AlphaLowerCase}
 Numeric        	= [0-9]
 AlphaNumeric   	= {Alpha}|{Numeric}
 AlphaLowNumeric	= {AlphaLowerCase}|{Numeric}
+
 Space          	= "\t"|" "
-Any 		   	= .
-NewLine		   	= "\n"		
+//Any 		   	= .
+//NewLine		   	= "\n"		
 EndOfLine	    = "\r"?"\n"
 
-Sign           	= [+-]
-Integer        	= {Sign}?(([1-9][0-9]*)|0)
+//Sign           	= [+-]
+//Integer        	= {Sign}?(([1-9][0-9]*)|0)
 //Decimal      	= \.[0-9]*
 //Exponent     	= [eE]{Integer}
 Number         	= (([1-9][0-9]*)|0)
@@ -50,7 +51,7 @@ NumError		= {Numeric}+{Alpha}+{AlphaNumeric}*
 %%// Identification of tokens
 
 <YYINITIAL>{
-	"/*"				{commentDepth++;yybegin(COMMENT);}
+							{commentDepth++;yybegin(COMMENT);}
 	{InlineComment}		{System.out.println("INLINE COMMENT");}
 
 	{VarnameError}	{System.out.println("VAR ERROR :" + yytext());}
