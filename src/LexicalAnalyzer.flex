@@ -23,7 +23,7 @@
 
 AlphaUpperCase 	= [A-Z]
 AlphaLowerCase 	= [a-z]
-//Alpha          	= {AlphaUpperCase}|{AlphaLowerCase}
+Alpha          	= {AlphaUpperCase}|{AlphaLowerCase}
 Numeric        	= [0-9]
 AlphaNumeric   	= {Alpha}|{Numeric}
 AlphaLowNumeric	= {AlphaLowerCase}|{Numeric}
