@@ -40,12 +40,12 @@ token: ,              lexical unit: COMMA
 token: \n             lexical unit: ENDLINE
 token: e              lexical unit: VARNAME
 token: :=             lexical unit: ASSIGN
-Zero ERROR :045
+ZERO ERROR :045
 token: ,              lexical unit: COMMA
 token: \n             lexical unit: ENDLINE
 token: f              lexical unit: VARNAME
 token: :=             lexical unit: ASSIGN
-Zero ERROR :00
+ZERO ERROR :00
 token: ,              lexical unit: COMMA
 token: \n             lexical unit: ENDLINE
 token: g              lexical unit: VARNAME

@@ -14,6 +14,11 @@ import java.util.Iterator;
 */
 
 public class Main{
+  /**
+   * Main function, creates an instance of the LexicalAnalyzer class and prints
+   * out the tokens it returns.
+   * @param argv
+   */
     public static void main(String[] argv) {
     //Syntax check
     if (argv.length == 0 || argv.length > 1) {
@@ -44,8 +49,28 @@ public class Main{
           receivedSymbol = scanner.nextToken();
         }
 
-        //Iteration through the symbol table, and display of its content
-        Iterator<Entry<String, Integer>> it = symbolTable.entrySet().iterator();
+        //Displaying of the symbol table
+        printSymbolTable(symbolTable);
+
+      } catch (java.io.FileNotFoundException e) {
+        System.out.println("File not found : \"" + argv[0] + "\"");
+      } catch (java.io.IOException e) {
+        System.out.println("IO error scanning file \"" + argv[0] + "\"");
+        System.out.println(e);
+      } catch (Exception e) {
+        System.out.println("Unexpected exception:");
+        e.printStackTrace();
+      }
+    }
+  }
+
+  /**
+   * Iterates through the symbol table and prints every variable in alphabetical 
+   * order with the line of first occurence.
+   * @param symbolTable
+   */
+  private static void printSymbolTable(Map<String, Integer> symbolTable) {
+      Iterator<Entry<String, Integer>> it = symbolTable.entrySet().iterator();
         if(it.hasNext()){
           System.out.println("\nVariables");
         }
@@ -54,18 +79,5 @@ public class Main{
           System.out.println(pair.getKey() + "\t" + pair.getValue());
           it.remove();
         }
-      }
-        catch (java.io.FileNotFoundException e) {
-          System.out.println("File not found : \""+argv[0]+"\"");
-        }
-        catch (java.io.IOException e) {
-          System.out.println("IO error scanning file \""+argv[0]+"\"");
-          System.out.println(e);
-        }
-        catch (Exception e) {
-          System.out.println("Unexpected exception:");
-          e.printStackTrace();
-        }
-      }
     }
 }

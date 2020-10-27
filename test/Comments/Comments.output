@@ -10,7 +10,10 @@ token: \n             lexical unit: ENDLINE
 token: abcd           lexical unit: VARNAME
 token: :=             lexical unit: ASSIGN
 token: 1              lexical unit: NUMBER
-INLINE COMMENT
+token: \n             lexical unit: ENDLINE
+token: \n             lexical unit: ENDLINE
+token: \n             lexical unit: ENDLINE
+COMMENT ERROR
 
 Variables
 abcd   15
