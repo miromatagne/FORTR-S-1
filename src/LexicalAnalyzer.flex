@@ -28,25 +28,19 @@ Numeric        	= [0-9]
 AlphaNumeric   	= {Alpha}|{Numeric}
 AlphaLowNumeric	= {AlphaLowerCase}|{Numeric}
 
-Space          	= "\t"|" "
-//Any 		   	= .
-//NewLine		   	= "\n"		
+Space          	= "\t"|" "	
 EndOfLine	    = "\r"?"\n"
 
-//Sign           	= [+-]
-//Integer        	= {Sign}?(([1-9][0-9]*)|0)
-//Decimal      	= \.[0-9]*
-//Exponent     	= [eE]{Integer}
 Number         	= (([1-9][0-9]*)|0)
 
 VarName        	= {AlphaLowerCase}{AlphaLowNumeric}*
 ProgName       	= {AlphaUpperCase}+{AlphaLowNumeric}+{AlphaNumeric}*
 InlineComment 	= "//".*
 
-//VarnameError 	= {AlphaLowerCase}+{AlphaLowNumeric}*[^{AlphaLowerCase}{Numeric}"\t"" ""\n""\r\n"]+[^"\t"" ""\n""\r\n"]*
 VarnameError 	= {AlphaLowerCase}+{AlphaLowNumeric}*{AlphaUpperCase}+{AlphaNumeric}*
 ProgNameError 	= {AlphaUpperCase}+ 
 NumError		= {Numeric}+{Alpha}+{AlphaNumeric}*
+ZeroError       = (0){Numeric}+
 
 %%// Identification of tokens
 
@@ -56,6 +50,7 @@ NumError		= {Numeric}+{Alpha}+{AlphaNumeric}*
 
 	{VarnameError}	{System.out.println("VAR ERROR :" + yytext());}
 	{NumError}		{System.out.println("NUM ERROR :" + yytext());}
+	{ZeroError}     {System.out.println("Zero ERROR :" + yytext());}
 
 	{ProgName}      {return new Symbol(LexicalUnit.PROGNAME,yyline, yycolumn, yytext());}
 	{Number}        {return new Symbol(LexicalUnit.NUMBER,yyline, yycolumn, yytext());}
@@ -87,8 +82,7 @@ NumError		= {Numeric}+{Alpha}+{AlphaNumeric}*
 	"READ"	        {return new Symbol(LexicalUnit.READ,yyline, yycolumn, yytext());}
 
 
-	// If/Else keywords  Remark : if we don't put a space between If and if (IFif), it will take the token with only IF
-	// Is it correct? In my opinion : no. So we have to put above a space but it's not on point right now
+	// If/Else keywords
 	"IF"	        {return new Symbol(LexicalUnit.IF,yyline, yycolumn, yytext());}
 	"THEN"          {return new Symbol(LexicalUnit.THEN,yyline, yycolumn, yytext());}
 	"ENDIF"         {return new Symbol(LexicalUnit.ENDIF,yyline, yycolumn, yytext());}
