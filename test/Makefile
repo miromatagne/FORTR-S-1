@@ -19,6 +19,10 @@ errors:
 	@diff -b --strip-trailing-cr ./Errors/Errors.output file && echo "Errors : Test Successful" || echo "Errors : Test Failed"
 	@rm -f file
 
+fortrS:
+	@
+	@
+
 instructions:
 	@java -cp ../bin Main ./Instructions/Instructions.fs >file 
 	@diff -b --strip-trailing-cr ./Instructions/Instructions.output file && echo "Instructions : Test Successful" || echo "Instructions : Test Failed"
