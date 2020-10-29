@@ -2,7 +2,7 @@ BEGINPROG Exponent
 
 /* Computes and outputs a positive number to a given positive power, both are entered
 by a user
-If the number is negative, print a string 'error' */
+If the number is negative, print an error */
 
     READ(base)          //Read the base
     READ(power)         //Read the exponent 
