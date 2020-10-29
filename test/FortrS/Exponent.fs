@@ -7,7 +7,7 @@ If the number is negative, print a string 'error' */
     READ(base)          //Read the base
     READ(power)         //Read the exponent 
     result := 1
-    error := error
+    error := -1
     
     i := 0
     IF(power > 0) THEN
@@ -25,5 +25,3 @@ If the number is negative, print a string 'error' */
         ENDIF
     ENDIF
 ENDPROG
-
-

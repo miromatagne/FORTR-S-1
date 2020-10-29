@@ -79,7 +79,6 @@ token: \n             lexical unit: ENDLINE
 token: ENDIF          lexical unit: ENDIF
 token: \n             lexical unit: ENDLINE
 token: ENDPROG        lexical unit: ENDPROG
-token: \n             lexical unit: ENDLINE
 
 Variables
 i       10

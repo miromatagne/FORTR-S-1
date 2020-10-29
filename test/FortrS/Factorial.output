@@ -58,7 +58,6 @@ token: result         lexical unit: VARNAME
 token: )              lexical unit: RPAREN
 token: \n             lexical unit: ENDLINE
 token: ENDPROG        lexical unit: ENDPROG
-token: \n             lexical unit: ENDLINE
 
 Variables
 number	6
